@@ -48,9 +48,9 @@ running the following command.
 
  11. Set the remote host and ports by using the following commands.
 
-	 - ```set RHOSTS <Metasploitable IP Address>
+	 - ```set RHOSTS <Metasploitable IP Address>```
 
-	 - ```set RPORT <VSFTPD port number>
+	 - ```set RPORT <VSFTPD port number>```
 
  12. Verify what payloads are available by using the "show payloads" command.
 
