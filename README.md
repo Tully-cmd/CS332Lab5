@@ -46,7 +46,7 @@ running the following command.
 
 	 - ```show options```
 
- 11. Set the remote host and the remote ports by using the following commands.
+ 11. Set the remote host and ports by using the following commands.
 
 	 - ```set RHOSTS <Metasploitable IP Address>
 
