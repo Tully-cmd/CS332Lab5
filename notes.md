@@ -30,4 +30,21 @@ PORT     STATE SERVICE     REASON         VERSION
 8180/tcp open  http        syn-ack ttl 64 Apache Tomcat/Coyote JSP engine 1.1
 ```
 
- - VSFTPD is running on port 21
+ - VSFTPD is running on port 21.
+
+ 8. There is one exploit module.
+```
+msf6 > search type:exploit name:vsftp
+
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  exploit/unix/ftp/vsftpd_234_backdoor  2011-07-03       excellent  No     VSFTPD v2.3.4 Backdoor Command Execution
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/ftp/vsftpd_234_backdoor
+```
+
+
